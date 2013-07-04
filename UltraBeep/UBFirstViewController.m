@@ -26,4 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)done:(UIStoryboardSegue *)segue {
+    // Optional place to read data from closing controller
+}
+
 @end

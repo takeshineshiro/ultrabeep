@@ -461,6 +461,7 @@
 				BCBC42121782A740002FF460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCBC42131782A740002FF460 /* Build configuration list for PBXNativeTarget "UltraBeepTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +470,7 @@
 				BCBC42151782A740002FF460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

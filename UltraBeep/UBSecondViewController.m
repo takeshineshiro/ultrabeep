@@ -17,6 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self freqChange:nil];
+    receiving = false;
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -26,4 +28,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)receiveToggle:(id)sender {
+    if (!receiving) {
+        [freqSlider setEnabled:NO];
+        [startButton setTitle: @"Stop Receiving" forState:UIControlStateNormal];
+    } else {
+        [freqSlider setEnabled:YES];
+        [startButton setTitle: @"Start Receiving" forState:UIControlStateNormal];
+    }
+    
+    receiving = !receiving;
+}
+
+- (IBAction)freqChange:(id)sender {
+    freq = [freqSlider value];
+    freq /= 400;
+    freq *= 400;
+    [freqLabel setText:[NSString stringWithFormat:@"%i Hz", freq]];
+}
 @end
