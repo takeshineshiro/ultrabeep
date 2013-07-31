@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3BFC8117979698002CA117 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC3BFC7B17979698002CA117 /* CADebugMacros.cpp */; };
+		BC3BFC8217979698002CA117 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC3BFC7D17979698002CA117 /* CAXException.cpp */; };
+		BC3BFC8317979698002CA117 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC3BFC8017979698002CA117 /* CAStreamBasicDescription.cpp */; };
+		BC41CD9B178A805D005D826B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC41CD9A178A805D005D826B /* Accelerate.framework */; };
+		BC41CD9D178A8069005D826B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC41CD9C178A8069005D826B /* AudioToolbox.framework */; };
+		BC6AE440178BD30F008221AB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6AE43F178BD30F008221AB /* CoreAudio.framework */; };
+		BCAE23D71785212500FF0342 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCAE23D61785212500FF0342 /* AVFoundation.framework */; };
 		BCBC41DF1782A740002FF460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBC41DE1782A740002FF460 /* Foundation.framework */; };
 		BCBC41E11782A740002FF460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBC41E01782A740002FF460 /* CoreGraphics.framework */; };
 		BCBC41E31782A740002FF460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBC41E21782A740002FF460 /* UIKit.framework */; };
@@ -22,6 +29,8 @@
 		BCBC42031782A740002FF460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCBC41E21782A740002FF460 /* UIKit.framework */; };
 		BCBC420B1782A740002FF460 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCBC42091782A740002FF460 /* InfoPlist.strings */; };
 		BCBC420D1782A740002FF460 /* UltraBeepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBC420C1782A740002FF460 /* UltraBeepTests.m */; };
+		BCC2FAC71788D86300B364C4 /* FFTBufferManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCC2FAC51788D86300B364C4 /* FFTBufferManager.cpp */; };
+		BCC2FACA1788D8B800B364C4 /* FFTWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = BCC2FAC91788D8B800B364C4 /* FFTWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC3BFC7917979698002CA117 /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
+		BC3BFC7A17979698002CA117 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
+		BC3BFC7B17979698002CA117 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
+		BC3BFC7C17979698002CA117 /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
+		BC3BFC7D17979698002CA117 /* CAXException.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAXException.cpp; sourceTree = "<group>"; };
+		BC3BFC7E17979698002CA117 /* CAMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAMath.h; sourceTree = "<group>"; };
+		BC3BFC7F17979698002CA117 /* CAStreamBasicDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAStreamBasicDescription.h; sourceTree = "<group>"; };
+		BC3BFC8017979698002CA117 /* CAStreamBasicDescription.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CAStreamBasicDescription.cpp; sourceTree = "<group>"; };
+		BC41CD9A178A805D005D826B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		BC41CD9C178A8069005D826B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BC6AE43D178BD222008221AB /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		BC6AE43F178BD30F008221AB /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BCAE23D61785212500FF0342 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		BCBC41DB1782A740002FF460 /* UltraBeep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UltraBeep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBC41DE1782A740002FF460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BCBC41E01782A740002FF460 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,6 +78,10 @@
 		BCBC42081782A740002FF460 /* UltraBeepTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UltraBeepTests-Info.plist"; sourceTree = "<group>"; };
 		BCBC420A1782A740002FF460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BCBC420C1782A740002FF460 /* UltraBeepTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UltraBeepTests.m; sourceTree = "<group>"; };
+		BCC2FAC51788D86300B364C4 /* FFTBufferManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FFTBufferManager.cpp; sourceTree = "<group>"; };
+		BCC2FAC61788D86300B364C4 /* FFTBufferManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTBufferManager.h; sourceTree = "<group>"; };
+		BCC2FAC81788D8B800B364C4 /* FFTWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTWrapper.h; sourceTree = "<group>"; };
+		BCC2FAC91788D8B800B364C4 /* FFTWrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FFTWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +89,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6AE440178BD30F008221AB /* CoreAudio.framework in Frameworks */,
+				BC41CD9D178A8069005D826B /* AudioToolbox.framework in Frameworks */,
+				BC41CD9B178A805D005D826B /* Accelerate.framework in Frameworks */,
+				BCAE23D71785212500FF0342 /* AVFoundation.framework in Frameworks */,
 				BCBC41E11782A740002FF460 /* CoreGraphics.framework in Frameworks */,
 				BCBC41E31782A740002FF460 /* UIKit.framework in Frameworks */,
 				BCBC41DF1782A740002FF460 /* Foundation.framework in Frameworks */,
@@ -104,6 +134,11 @@
 		BCBC41DD1782A740002FF460 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC6AE43F178BD30F008221AB /* CoreAudio.framework */,
+				BC6AE43D178BD222008221AB /* AudioUnit.framework */,
+				BC41CD9C178A8069005D826B /* AudioToolbox.framework */,
+				BC41CD9A178A805D005D826B /* Accelerate.framework */,
+				BCAE23D61785212500FF0342 /* AVFoundation.framework */,
 				BCBC41DE1782A740002FF460 /* Foundation.framework */,
 				BCBC41E01782A740002FF460 /* CoreGraphics.framework */,
 				BCBC41E21782A740002FF460 /* UIKit.framework */,
@@ -115,7 +150,10 @@
 		BCBC41E41782A740002FF460 /* UltraBeep */ = {
 			isa = PBXGroup;
 			children = (
+				BCC2FAC41788D84400B364C4 /* Apple-provided code */,
 				BCBC41ED1782A740002FF460 /* UBAppDelegate.h */,
+				BCC2FAC81788D8B800B364C4 /* FFTWrapper.h */,
+				BCC2FAC91788D8B800B364C4 /* FFTWrapper.mm */,
 				BCBC41EE1782A740002FF460 /* UBAppDelegate.m */,
 				BCBC41F01782A740002FF460 /* Main.storyboard */,
 				BCBC41F31782A740002FF460 /* UBFirstViewController.h */,
@@ -155,6 +193,23 @@
 				BCBC42091782A740002FF460 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCC2FAC41788D84400B364C4 /* Apple-provided code */ = {
+			isa = PBXGroup;
+			children = (
+				BC3BFC7917979698002CA117 /* CABitOperations.h */,
+				BC3BFC7A17979698002CA117 /* CADebugMacros.h */,
+				BC3BFC7B17979698002CA117 /* CADebugMacros.cpp */,
+				BC3BFC7C17979698002CA117 /* CAXException.h */,
+				BC3BFC7D17979698002CA117 /* CAXException.cpp */,
+				BC3BFC7E17979698002CA117 /* CAMath.h */,
+				BC3BFC7F17979698002CA117 /* CAStreamBasicDescription.h */,
+				BC3BFC8017979698002CA117 /* CAStreamBasicDescription.cpp */,
+				BCC2FAC51788D86300B364C4 /* FFTBufferManager.cpp */,
+				BCC2FAC61788D86300B364C4 /* FFTBufferManager.h */,
+			);
+			name = "Apple-provided code";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCC2FACA1788D8B800B364C4 /* FFTWrapper.mm in Sources */,
 				BCBC41EB1782A740002FF460 /* main.m in Sources */,
+				BC3BFC8317979698002CA117 /* CAStreamBasicDescription.cpp in Sources */,
 				BCBC41F81782A740002FF460 /* UBSecondViewController.m in Sources */,
+				BCC2FAC71788D86300B364C4 /* FFTBufferManager.cpp in Sources */,
+				BC3BFC8217979698002CA117 /* CAXException.cpp in Sources */,
 				BCBC41F51782A740002FF460 /* UBFirstViewController.m in Sources */,
+				BC3BFC8117979698002CA117 /* CADebugMacros.cpp in Sources */,
 				BCBC41EF1782A740002FF460 /* UBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
