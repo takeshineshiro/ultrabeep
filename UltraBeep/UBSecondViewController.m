@@ -184,12 +184,15 @@ static OSStatus	PerformThru(
         //Setting up buffer space
         [FFTWrapper intArrayNewWithPointer:&l_fftData andSize:maxFPS/2];
         
+        //Initializing amplitude buffer for the current frequency
+        ampBuffer = [[UBAmplitudeBuffer alloc] initWithDelegate:self frequency:freq andSampleRate:[session sampleRate]];
+        
         //Starting audio unit
         AudioOutputUnitStart(rioUnit);
         
         //Set triggering of FFT analysis and output refresh
-        //*****IS INTERVAL TOO HIGH?
-        timer = [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(processAudioData) userInfo:nil repeats:YES];
+        //*****IS INTERVAL CORRECT?
+        timer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(processAudioData) userInfo:nil repeats:YES];
         
         
         
@@ -198,7 +201,7 @@ static OSStatus	PerformThru(
         //Stopping timer
         if (timer) {
             [timer invalidate];
-            timer = NULL;
+            timer = nil;
         }
         
         AudioOutputUnitStop(rioUnit);
@@ -209,6 +212,8 @@ static OSStatus	PerformThru(
         
         [freqSlider setEnabled:YES];
         [startButton setTitle: @"Start Receiving" forState:UIControlStateNormal];
+        
+        ampBuffer = nil;
         
     }
     
@@ -229,14 +234,21 @@ static OSStatus	PerformThru(
 
             memmove(fftData, l_fftData, fftLength * sizeof(Float32));
             
-            //NSLog(@"There is new data!");
-            NSString *labelText = [NSString stringWithFormat:@"%i",(int)fftData[(int) (lengthOfData*2.0*freq/[session sampleRate]) ]];
-            [numLabel setText:labelText];
+            [ampBuffer saveData:fftData withSize:fftLength];
 
 		}
-	} //else NSLog(@"There is NO new data!");
+	}
+}
+
+
+
+-(void) receiveAmplitudeResult:(BOOL)result fromValue:(SInt32)value {
     
+    NSString *labelText = [NSString stringWithFormat:@"%i",(int)value];
+    [numLabel setText:labelText];
     
+    if (result) [numLabel setBackgroundColor:[UIColor redColor]];
+    else [numLabel setBackgroundColor:[UIColor clearColor]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

@@ -9,5 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface UBFirstViewController : UIViewController
+{
+    __weak IBOutlet UILabel *freqLabel;
+    __weak IBOutlet UISlider *freqSlider;
+}
+
+@property double theta;
+@property uint freq;
+
+
+- (IBAction)freqChange:(id)sender;
+
 
 @end

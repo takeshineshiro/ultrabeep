@@ -11,8 +11,9 @@
 #import "FFTWrapper.h"
 #import <AudioUnit/AudioUnit.h>
 #import <CoreAudio/CoreAudioTypes.h>
+#import "UBAmplitudeBuffer.h"
 
-@interface UBSecondViewController : UIViewController
+@interface UBSecondViewController : UIViewController <UBAmplitudeBufferDelegate>
 {
     __weak IBOutlet UILabel *freqLabel;
     __weak IBOutlet UISlider *freqSlider;
@@ -27,7 +28,7 @@
     SInt32*	fftData;
 	NSUInteger fftLength;
     int32_t* l_fftData;
-
+    UBAmplitudeBuffer* ampBuffer;
 }
 
 @property (nonatomic, assign)	AudioUnit rioUnit;
@@ -36,4 +37,6 @@
 - (IBAction)receiveToggle:(id)sender;
 - (IBAction)freqChange:(id)sender;
 - (void)processAudioData;
+- (void)receiveAmplitudeResult:(BOOL)result fromValue:(SInt32)value;
+
 @end
