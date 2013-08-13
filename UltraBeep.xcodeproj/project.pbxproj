@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC285D8517B5CF3500A6C08C /* Beeper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC285D8417B5CF3500A6C08C /* Beeper.m */; };
 		BC3BFC8117979698002CA117 /* CADebugMacros.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC3BFC7B17979698002CA117 /* CADebugMacros.cpp */; };
 		BC3BFC8217979698002CA117 /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC3BFC7D17979698002CA117 /* CAXException.cpp */; };
 		BC3BFC8317979698002CA117 /* CAStreamBasicDescription.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC3BFC8017979698002CA117 /* CAStreamBasicDescription.cpp */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC285D8317B5CF3500A6C08C /* Beeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beeper.h; sourceTree = "<group>"; };
+		BC285D8417B5CF3500A6C08C /* Beeper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beeper.m; sourceTree = "<group>"; };
 		BC3BFC7917979698002CA117 /* CABitOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CABitOperations.h; sourceTree = "<group>"; };
 		BC3BFC7A17979698002CA117 /* CADebugMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CADebugMacros.h; sourceTree = "<group>"; };
 		BC3BFC7B17979698002CA117 /* CADebugMacros.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CADebugMacros.cpp; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				BC86C9D917AEE06E00C3F4C7 /* UBTransmissionViewController.m */,
 				BCBC41F61782A740002FF460 /* UBSecondViewController.h */,
 				BCBC41F71782A740002FF460 /* UBSecondViewController.m */,
+				BC285D8317B5CF3500A6C08C /* Beeper.h */,
+				BC285D8417B5CF3500A6C08C /* Beeper.m */,
 				BC73D36117A9D43300FDAEC8 /* UBAmplitudeBuffer.h */,
 				BC73D36217A9D43300FDAEC8 /* UBAmplitudeBuffer.m */,
 				BCBC41F91782A740002FF460 /* Images.xcassets */,
@@ -270,6 +275,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Diego von Beck";
 				TargetAttributes = {
+					BCBC41DA1782A740002FF460 = {
+						DevelopmentTeam = 6PP5HKJ3Z8;
+					};
 					BCBC41FE1782A740002FF460 = {
 						TestTargetID = BCBC41DA1782A740002FF460;
 					};
@@ -330,6 +338,7 @@
 				BCBC41F51782A740002FF460 /* UBFirstViewController.m in Sources */,
 				BC3BFC8117979698002CA117 /* CADebugMacros.cpp in Sources */,
 				BC73D36317A9D43300FDAEC8 /* UBAmplitudeBuffer.m in Sources */,
+				BC285D8517B5CF3500A6C08C /* Beeper.m in Sources */,
 				BCBC41EF1782A740002FF460 /* UBAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,10 +462,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UltraBeep/UltraBeep-Prefix.pch";
 				INFOPLIST_FILE = "UltraBeep/UltraBeep-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -466,10 +479,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UltraBeep/UltraBeep-Prefix.pch";
 				INFOPLIST_FILE = "UltraBeep/UltraBeep-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -12,6 +12,7 @@
 #import <AudioUnit/AudioUnit.h>
 #import <CoreAudio/CoreAudioTypes.h>
 #import "UBAmplitudeBuffer.h"
+#import "Beeper.h"
 
 @interface UBSecondViewController : UIViewController <UBAmplitudeBufferDelegate>
 {
@@ -29,6 +30,7 @@
 	NSUInteger fftLength;
     int32_t* l_fftData;
     UBAmplitudeBuffer* ampBuffer;
+    Beeper* beeper;
 }
 
 @property (nonatomic, assign)	AudioUnit rioUnit;

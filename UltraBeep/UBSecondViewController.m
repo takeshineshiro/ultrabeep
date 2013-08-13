@@ -80,6 +80,7 @@ static OSStatus	PerformThru(
     
 	//Initialize audio session
     session = [AVAudioSession sharedInstance];
+    beeper = [[Beeper alloc] initWithFrequency:700];
 }
 
 - (void)didReceiveMemoryWarning
@@ -246,6 +247,11 @@ static OSStatus	PerformThru(
     
     NSString *labelText = [NSString stringWithFormat:@"%i",(int)value];
     [numLabel setText:labelText];
+    
+    if ( ( ([numLabel backgroundColor] == [UIColor redColor]) && !result ) ||
+        ( ([numLabel backgroundColor] != [UIColor redColor]) && result) ) {
+        [beeper togglePlay];
+    }
     
     if (result) [numLabel setBackgroundColor:[UIColor redColor]];
     else [numLabel setBackgroundColor:[UIColor clearColor]];
